@@ -1,0 +1,419 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Content */
+.modal-content {
+  width: 400px; /* Set modal width */
+  height: 542px; /* Set modal height */
+  top: 113px; /* Vertical position from the top */
+  left: 312px; /* Horizontal position from the left */
+  position: absolute; /* Absolute positioning */
+  background-color: white;
+  // padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Apply opacity transition when modal is open */
+.modal-overlay.open .modal-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-top: -18px;
+  margin-right: 10px;
+  font-size: 50px;
+}
+
+/* Header and Paragraph Styling */
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.highlight {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.gst-benefits {
+  margin-top: 20px;
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+  }
+}
+
+.gst-details {
+  margin-top: 20px;
+  h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.breakdown {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+
+  .pay,
+  .arrows,
+  .gst {
+    text-align: center;
+    flex: 1;
+  }
+
+  .arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.paid-by {
+  font-size: 14px;
+  color: #777;
+  margin-top: 20px;
+}
+/* Modal Header */
+/* Modal Header */
+/* Modal Header */
+.top-modal {
+  display: flex; /* Flexbox to align elements */
+  justify-content: space-between; /* Distribute space between title and close button */
+  align-items: center; /* Vertically center the items */
+  padding: 10px 20px; /* Add padding for spacing */
+  background-color: #8e8e8e; /* Background color of the header */
+  border-bottom: 2px solid #ccc; /* Add a bottom border to separate header */
+}
+
+/* Title Styling */
+.top-modal h2 {
+  font-size: 22px; /* Adjust font size for the title */
+  color: white; /* White color for the title */
+  margin: 0; /* Remove default margin */
+}
+
+/* Close Button Styling */
+.close-button {
+  font-size: 30px; /* Adjust font size of the X */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  background: none; /* Remove background */
+  border: none; /* Remove default border */
+  color: white; /* Close button color */
+  padding: 0; /* Remove padding */
+  transition: color 0.3s ease; /* Smooth transition on hover */
+  margin-top: 1px;
+  margin-right: 15px;
+}
+
+.close-button:hover {
+  color: red; /* Change color on hover */
+}
+
+.Container {
+  height: 90px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  max-width: 24rem;
+  width: 92%;
+  margin: 6px;
+  padding: 9px;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: space-around;
+}
+.notification p {
+  color: #374151;
+  font-size: 0.875rem;
+  margin: 0;
+}
+.gst-info {
+  // display: flex;
+  // align-items: center;
+  background: linear-gradient(to right, #d1fae5, #dbeafe);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  justify-content: space-around;
+  height: 37px;
+  width: 101%;
+  margin-bottom: 4px;
+  margin-left: -9px;
+  margin-bottom: 4px;
+}
+
+.gst-info p {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0;
+}
+.containers {
+  width: 360px;
+  height: 333px;
+  gap: 0px;
+  opacity: 1;
+  background-color: rgba(250, 250, 250, 1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 18px;
+}
+
+.notification,
+.gst-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px; /* Space between the sections */
+}
+
+.info-icon,
+.thumbs-up {
+  font-size: 1.5rem; /* Size of the emoji */
+  margin-right: 10px; /* Space between emoji and text */
+}
+
+p {
+  margin: 0; /* No margin for paragraphs */
+  font-size: 0.9rem; /* Text size for better readability */
+}
+
+.header {
+  background-color: #e0f2fe;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text {
+  color: #4b5563;
+}
+
+.header-amount {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.content {
+  // padding: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 600;
+  // margin-bottom: 1rem;
+}
+
+.pay-text {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.amount {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.inclusive-text {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.detail {
+  text-align: center;
+  height: 51px;
+  width: 144px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.detail-amount {
+  width: 34px;
+  height: 18px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-size: 14px;
+  font-weight: 700px;
+  line-height: 16.41px;
+}
+
+.green {
+  color: #16a34a;
+}
+
+.red {
+  color: #dc2626;
+}
+
+.detail-text {
+  height: 13px;
+  width: 140px;
+  color: #4b5563;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 12.89px;
+}
+
+.gst-paid {
+  // background-color: #ecfdf5;
+  // border: 1px solid #16a34a;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  width: 319.75px;
+  height: 60.25px;
+}
+
+.thumb-icon {
+  color: #16a34a;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.gst-amount {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.75px;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.gst-text {
+  color: rgba(51, 51, 51, 1);
+  width: 133.12px;
+  font-size: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.get-text {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.get-amount {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.wallet-text {
+  color: #4b5563;
+}
+.you-pay {
+  display: flex;
+}
+.you-pay h1 h3 h4 {
+  color: black;
+}
+.amount {
+  font-size: 15px;
+  font-weight: 900;
+}
+.inclussive {
+  color: hsl(0, 0%, 80%);
+  font-size: 10px;
+  font-weight: 700;
+}
+.paid-left {
+  width: 212.63px;
+  height: 47.25px;
+  border-radius: 5.25px;
+  border: 1px solid rgba(0, 191, 54, 1);
+  background-color: rgba(231, 255, 241, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+}
+.paid-right {
+  width: 68px;
+  height: 62px;
+  gap: 4px;
+}
+.get-texts {
+  width: 68px;
+  height: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}
+.get-amounts {
+  width: 68px;
+  height: 28px;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(119, 170, 0, 1);
+}
+.wallet-texts {
+  width: 68px;
+  height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.middle-cost {
+  width: 367px;
+  height: 66px;
+}
